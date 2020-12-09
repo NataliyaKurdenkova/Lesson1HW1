@@ -15,49 +15,59 @@ public class GameXO {
     public static final char HUMAN_DOT = 'X';
     public static final char AI_DOT = '0';
     public static final char EMPTY_DOT = '_';
-    public static int countV = 0;
-    public static int countG = 0;
-    public static int countD1 = 0;
-    public static int countD2 = 0;
+   // public static int countV = 0;
+   // public static int countG = 0;
+   // public static int countD1 = 0;
+   // public static int countD2 = 0;
+    public static int winEndHum=0;
+    public static int winEndAI=0;
 
     public static void main(String[] args) {
         System.out.println("ведите количество столбцов и строк");
         sizeMapY = SCANNER.nextInt();
 
         sizeMapX = sizeMapY;
-        initMap(sizeMapY, sizeMapX);
-        printMap();
-
-        while (true) {
-            System.out.println("Ход игрока");
-            humanTurn();
+        do {
+            initMap(sizeMapY, sizeMapX);
             printMap();
-            if (checkWin(HUMAN_DOT)) {
 
-                System.out.println("Human win!");
-                break;
+            while (true) {
+                System.out.println("Ход игрока");
+                humanTurn();
+                printMap();
+                if (checkWin(HUMAN_DOT)) {
+
+                    System.out.println("Human win!");
+                    winEndHum++;
+                    System.out.println(winEndHum);
+                    break;
+                }
+                if (isMapFull()) {
+
+                    System.out.println("Draw!");
+                    break;
+                }
+
+
+                System.out.println("Ход компьютера");
+                aiTurn();
+                printMap();
+                if (checkWin(AI_DOT)) {
+
+                    System.out.println("AI win!");
+                    winEndAI++;
+                    System.out.println(winEndAI);
+                    break;
+                }
+                if (isMapFull()) {
+
+                    System.out.println("Draw!");
+                    break;
+                }
             }
-            if (isMapFull()) {
-
-                System.out.println("Draw!");
-                break;
-            }
-
-
-            System.out.println("Ход компьютера");
-            aiTurn();
-            printMap();
-            if (checkWin(AI_DOT)) {
-
-                System.out.println("AI win!");
-                break;
-            }
-            if (isMapFull()) {
-
-                System.out.println("Draw!");
-                break;
-            }
-        }
+        }while((winEndHum<4)&&(winEndAI<4));
+        if(winEndAI==4)System.out.println("Super Champion AI");
+        else System.out.println("Super Champion Human");
         SCANNER.close();
     }
 
@@ -154,10 +164,10 @@ public class GameXO {
 // проверка по диагонали
         // if (map[0][0] == symbol && map[1][1] == symbol && map[2][2] == symbol) return true;
         //  if (map[0][2] == symbol && map[1][1] == symbol && map[2][0] == symbol) return true;
-        // int countV = 0;
-        //int countG = 0;
-        // int countD1 = 0;
-        //int countD2 = 0;
+         int countV = 0;
+        int countG = 0;
+         int countD1 = 0;
+        int countD2 = 0;
 // проверка по горизонтали
         for (int y = 0; y < sizeMapY; y++) {
             for (int x = 0; x < sizeMapX; x++) {
