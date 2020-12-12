@@ -1,0 +1,42 @@
+[33mcommit 59301ac29406251058b58bd39631656bc8623b0e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/myprog[m[33m, [m[1;32mmyprog[m[33m)[m
+Merge: 89f4f2e d4c2f31
+Author: NataliyaKurdenkova <natasha_s.86@mail.ru>
+Date:   Wed Dec 9 21:20:34 2020 +0300
+
+    Merge remote-tracking branch 'origin/myprog' into myprog
+
+[33mcommit d4c2f31a203fa20881b036f2322fe193d3622f33[m
+Author: NataliyaKurdenkova <natasha_s.86@mail.ru>
+Date:   Wed Dec 9 20:40:39 2020 +0300
+
+    add series 4 in Homework 3
+
+[33mcommit 89f4f2edfcaa212a4e5955433176fbd9d0487d26[m
+Author: NataliyaKurdenkova <natasha_s.86@mail.ru>
+Date:   Wed Dec 9 20:12:14 2020 +0300
+
+    add Homework 3
+
+[33mcommit e18a2cf265a94d22d13ca22b2f1d4549ea35d585[m
+Author: NataliyaKurdenkova <natasha_s.86@mail.ru>
+Date:   Sat Dec 5 14:24:29 2020 +0300
+
+    add homework2
+
+[33mcommit b4bd828709321399e643add30d18d08f564ce9eb[m
+Author: NataliyaKurdenkova <natasha_s.86@mail.ru>
+Date:   Mon Nov 30 21:26:05 2020 +0300
+
+    add homework
+
+[33mcommit f5d9ea69d6dda0ce420abcc5b8e708a695a75e60[m
+Author: NataliyaKurdenkova <natasha_s.86@mail.ru>
+Date:   Mon Nov 30 21:24:31 2020 +0300
+
+    add project
+
+[33mcommit ccccd1e1ea388bb933d37999aafdc709e671d920[m
+Author: NataliyaKurdenkova <74761356+NataliyaKurdenkova@users.noreply.github.com>
+Date:   Mon Nov 30 21:19:08 2020 +0300
+
+    Initial commit
