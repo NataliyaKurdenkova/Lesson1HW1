@@ -23,23 +23,39 @@ package Lesson5.Homework;
 import java.util.Random;
 
 public abstract class Animals {
-
+    protected String name;
     protected int limitRun;
     protected double limitSwim;
     protected double limitJump;
     public static final Random RANDOM = new Random();
 
-    public Animals(int limitRun,double limitJump,double limitSwim) {
-        this.limitRun=RANDOM.nextInt(limitRun);
-        this.limitJump= (limitJump != 0) ? RANDOM.nextDouble()*limitJump : limitJump;
-        this.limitSwim= (limitSwim != 0) ? RANDOM.nextDouble()*limitSwim : limitSwim;
+    public Animals(String name, int limitRun, double limitJump, double limitSwim) {
+        this.name = name;
+        this.limitRun = RANDOM.nextInt(limitRun);
+        this.limitJump = (limitJump != 0) ? RANDOM.nextDouble() * limitJump : limitJump;
+        this.limitSwim = (limitSwim != 0) ? RANDOM.nextDouble() * limitSwim : limitSwim;
     }
 
-    public abstract void run(int length);
+    public String run(int length) {
+        if (length > limitRun) return "не пробежал(а)";
+        else {
+            return "пробежал(а)";
+        }
 
-    public abstract void jump(double height);
+    }
 
-    public abstract void swim(double length);
+    public String jump(double height) {
+        if (height > limitRun) return "не пыгнул(а)";
+        else {
+            return "прыгнул(а)";
+        }
+    }
+        public String swim(double length){
+        if(length>limitRun) return "не проплыл(а)";
+        else{
+            return"проплыл(а)";
+        }
+    }
 
-}
+    }
 

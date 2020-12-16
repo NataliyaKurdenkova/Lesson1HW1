@@ -1,27 +1,15 @@
 package Lesson5.Homework;
 
 public class Cat extends Animals {
-    public Cat(int limitRun, double limitJump, double limitSwim)
+    public Cat(String name,int limitRun, double limitJump, double limitSwim)
     {
-        super(limitRun, limitJump, limitSwim);
+        super(name,limitRun, limitJump, limitSwim);
 
     }
+
     @Override
-    public void run(int length){
-        if(length>limitRun) System.out.println("Кот не пробежал");
-        else{
-            System.out.println("Кот пробежал");
-        }
+    public String swim(double length){
+        return "плавать не умеет";
     }
-    @Override
-    public void swim(double length){
-        System.out.println("Коты плавать не умеют");
-    }
-    @Override
-    public void jump(double height){
-        if(height>limitJump) System.out.println("Кот не прыгнул");
-        else{
-            System.out.println("Кот прыгнул");
-        }
-    }
+
 }
